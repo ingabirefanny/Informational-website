@@ -1,0 +1,165 @@
+
+.homepage {
+  background-color: #1a1a2e;
+  color: white;
+  min-height: 100vh;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #1a1a2e;
+  z-index: 1000;
+}
+
+.nav-logo img {
+  height: 40px;
+}
+
+.nav-links {
+  display: flex;
+}
+
+.nav-links ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-left: 2rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  /* z-index: 1001; */
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 2px 0;
+  transition: 0.3s;
+} 
+
+/* .hamburger.active span:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+} */
+
+.close-icon {
+  display: none;
+  font-size: 2rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6rem 2rem 2rem;
+  min-height: 100vh;
+}
+
+.hero-content {
+  max-width: 50%;
+}
+
+.hero-text {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  /* padding: 20px; */
+  /* font-size: 1rem; */
+  background-color: #6f8eb7;
+  color: white;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+  height: 40px;
+  width: 150px;
+}
+
+.hero-image {
+  max-width: 50%;
+  height: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #1a1a2e;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links li {
+    margin: 1rem 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .close-icon {
+    display: block;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 4rem;
+  }
+
+  .hero-content, .hero-image {
+    max-width: 100%;
+  }
+
+  .hero-image {
+    margin-top: 2rem;
+  }
+}
